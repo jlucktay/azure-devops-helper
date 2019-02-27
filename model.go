@@ -1,20 +1,11 @@
 package adh
 
-type config struct {
-	ApiVersion   string `json:"api-version,omitempty"`
+// Config holds settings that are persisted to disk under the user's $HOME
+// directory, which describe an Azure DevOps organization/project that will be
+// dealt with via API.
+type Config struct {
 	Organization string `json:"organization,omitempty"`
 	Project      string `json:"project,omitempty"`
 	Token        string `json:"token,omitempty"`
 }
 
-/*
-https://
-dev.azure.com/
-DanClzAutomation/
-DanMigrationFactory/
-_apis/
-build/
-builds
-?
-api-version=5.0
-*/
